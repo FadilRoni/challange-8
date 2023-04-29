@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"log"
 	"math/rand"
 	"net/http"
 	"time"
@@ -51,7 +50,7 @@ func main() {
 			fmt.Printf("{\n water: %v, \n wind: %v\n}\n status water: %v\n status wind: %v\n", weatherData.Data.ValueWater, weatherData.Data.ValueWind, weatherData.StatusWater, weatherData.StatusWind)
 
 		case <-timer.C:
-			log.Fatalln("Selesai")
+			fmt.Println("Selesai")
 			return
 		}
 	}
